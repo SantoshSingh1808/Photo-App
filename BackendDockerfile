@@ -1,0 +1,10 @@
+# Base image
+FROM node:18
+
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN mkdir -p /app/photos
+
+EXPOSE 3001
+CMD ["npm", "run", "server"]
